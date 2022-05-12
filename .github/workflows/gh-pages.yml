@@ -1,0 +1,44 @@
+name: GitHub Pages App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 17.x]
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install pnpm package manager
+        run: npm install -g pnpm
+        shell: bash
+
+      - name: Install app dependencies
+        run: pnpm install
+        shell: bash
+
+      - name: Build production ready app
+        run: npm run build
+        shell: bash
+
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          commit_message: ${{ github.event.head_commit.message }}

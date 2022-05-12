@@ -4,6 +4,9 @@ import mapboxgl from 'mapbox-gl'
 import Graph from './Graph'
 
 mapboxgl.accessToken = "pk.eyJ1IjoiamFzb25tdXJ5IiwiYSI6ImNrdXhxdGFkYTA0cmcycGxkNG56ZHJoaGkifQ.MJ7i_ZRoingkxpBgMacNkg"
+// see https://github.com/visgl/react-map-gl/issues/1266
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 function App() {
     const mapContainer = useRef(null)

@@ -40,5 +40,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
           commit_message: ${{ github.event.head_commit.message }}
+          allow_empty_commit: true
+          publish_dir: ./build
+          publish_branch: gh-pages

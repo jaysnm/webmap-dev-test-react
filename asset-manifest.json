@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "static/css/main.5c7d201f.css",
-    "main.js": "static/js/main.8cc7baa3.js",
-    "static/js/mapbox-gl-csp-worker.cadf142b.worker.js": "static/js/mapbox-gl-csp-worker.cadf142b.worker.js",
-    "index.html": "/index.html",
-    "main.5c7d201f.css.map": "static/css/main.5c7d201f.css.map",
-    "main.8cc7baa3.js.map": "static/js/main.8cc7baa3.js.map"
+    "main.css": "/webmap-dev-test-react/static/css/main.5c7d201f.css",
+    "main.js": "/webmap-dev-test-react/static/js/main.64ef1994.js",
+    "static/js/mapbox-gl-csp-worker.a48b1de2.worker.js": "/webmap-dev-test-react/static/js/mapbox-gl-csp-worker.a48b1de2.worker.js",
+    "index.html": "/webmap-dev-test-react/index.html",
+    "main.5c7d201f.css.map": "/webmap-dev-test-react/static/css/main.5c7d201f.css.map",
+    "main.64ef1994.js.map": "/webmap-dev-test-react/static/js/main.64ef1994.js.map"
   },
   "entrypoints": [
     "static/css/main.5c7d201f.css",
-    "static/js/main.8cc7baa3.js"
+    "static/js/main.64ef1994.js"
   ]
 }

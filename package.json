@@ -13,7 +13,7 @@
         "@testing-library/user-event": "^13.5.0",
         "mapbox-gl": "^2.8.2",
         "plotly.js": "^2.12.1",
-        "pnpm": "^7.0.1",
+        "pnpm": "^7.33.4",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
         "react-plotly.js": "^2.5.1",
